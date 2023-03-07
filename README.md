@@ -7,9 +7,20 @@
 ## Installation
 
 ```sh
-$ npm install -g commit-semantica-moca
+$ npm install -g semantic-commit-moca
 ```
 
+## Update
+
+```sh
+$ npm update -g semantic-commit-moca
+```
+
+## Uninstall
+
+```sh
+$ npm uninstall -g semantic-commit-moca
+```
 ## uso
 
 ```sh
