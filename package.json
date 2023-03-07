@@ -1,15 +1,25 @@
 {
   "name": "gitCommit-semanti-MOCA",
   "version": "1.0.0",
-  "description": "",
+  "description": "Te permite llevar una semantica de los commit contruidos",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bin": {
+    "gitcs": "./src/index.js"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "semantic",
+    "github",
+    "goodCode"
+  ],
+  "author": "Alvaro Anderson Morales Caballero",
+  "preferGlobal": true,
+  "license": "MIT",
   "dependencies": {
     "@clack/prompts": "0.6.3",
     "picocolors": "1.0.0"
