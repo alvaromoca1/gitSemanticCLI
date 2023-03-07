@@ -10,6 +10,12 @@
 $ npm install -g commit-semantica-moca
 ```
 
+## uso
+
+```sh
+$ amcGit
+```
+
 ## Descripcion
 
 Te ayuda a utilizar la semantica en tus commits para tener un commit mas pulcro, con la ayuda de indicadores de comando.
