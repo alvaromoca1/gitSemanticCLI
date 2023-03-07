@@ -18,6 +18,10 @@
     "goodCode"
   ],
   "author": "Alvaro Anderson Morales Caballero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvaromoca1/gitSemanticCLI.git"
+  },
   "preferGlobal": true,
   "license": "MIT",
   "dependencies": {
