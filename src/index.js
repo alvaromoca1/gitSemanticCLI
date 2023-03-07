@@ -5,7 +5,7 @@ import {
     select
 } from '@clack/prompts';
 import colors from 'picocolors' 
-import { getChangedFiles, getStagedFiles } from './services/git.js';
+import { getChangedFiles, getStagedFiles, getStartCommit } from './services/git.js';
 import { CommitsTypes } from './utils/commitsType.js';
 
 try {

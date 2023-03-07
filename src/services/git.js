@@ -19,7 +19,7 @@ export async function getStagedFiles(){
 }
 
 export async function getStartCommit(pref,commit){
-    const newCommit  = await execAsync(`git commit -m "${pref}: ${commit}"`)
-    console.log(newCommit)
-    return newCommit
+    const { stdout }  = await execAsync(`git commit -m "${pref}: ${commit}"`)
+    console.log(stdout)
+    return cleanStdout(stdout)
 }
