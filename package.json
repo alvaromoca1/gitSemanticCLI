@@ -1,6 +1,6 @@
 {
   "name": "commit-semantica-moca",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Te permite llevar una semantica de los commit contruidos",
   "type": "module",
   "main": "index.js",
@@ -8,7 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "gitcs": "./src/index.js"
+    "amcGit": "./src/bin.js"
+  },
+  "devDependencies": {
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   },
   "keywords": [
     "git",
