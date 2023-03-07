@@ -1,6 +1,6 @@
 {
-  "name": "gitCommit-semanti-MOCA",
-  "version": "1.0.0",
+  "name": "commit-semantica-moca",
+  "version": "1.1.0",
   "description": "Te permite llevar una semantica de los commit contruidos",
   "type": "module",
   "main": "index.js",
@@ -18,6 +18,10 @@
     "goodCode"
   ],
   "author": "Alvaro Anderson Morales Caballero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvaromoca1/gitSemanticCLI.git"
+  },
   "preferGlobal": true,
   "license": "MIT",
   "dependencies": {
