@@ -1,6 +1,6 @@
 {
   "name": "semantic-commit-moca",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Te permite llevar una semantica de los commit contruidos",
   "type": "module",
   "main": "index.js",
