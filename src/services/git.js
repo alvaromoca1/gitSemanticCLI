@@ -18,6 +18,11 @@ export async function getStagedFiles(){
     return cleanStdout(stdout)
 }
 
+export async function startAddChange(){
+    await execAsync('git add .');
+    return;
+}
+
 export async function getStartCommit(pref,commit){
     const { stdout }  = await execAsync(`git commit -m "${pref}: ${commit}"`)
     console.log(stdout)

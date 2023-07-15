@@ -5,7 +5,7 @@ import {
     select
 } from '@clack/prompts';
 import colors from 'picocolors' 
-import { getChangedFiles, getStagedFiles, getStartCommit } from './services/git.js';
+import { getChangedFiles, getStagedFiles, startAddChange,getStartCommit } from './services/git.js';
 import { CommitsTypes } from './utils/commitsType.js';
 
 try {
@@ -29,6 +29,7 @@ try {
         message: 'Introduce tu nuevo commit:',
         placeholder: 'tu commit ...'
     })
+    await startAddChange();
     await getStartCommit(commitOption,commitTag);
     outro('gran commit, sigue codenando...');
 } catch (error) {
