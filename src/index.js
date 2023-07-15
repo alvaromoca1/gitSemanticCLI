@@ -22,7 +22,7 @@ try {
     const commitOption = await select({
         message: 'Selecciona el Tipo de Commit:',
         options: Object.entries(CommitsTypes).map(([key,value])=>({
-            value: key,
+            value: `${value.icon} ${key}`,
             label: `${value.emoji} ${key} -> ${value.description}`
         }))
     })
