@@ -29,7 +29,7 @@ $ amcGit
 
 ## Descripcion
 
-Te ayuda a utilizar la semantica en tus commits para tener un commit mas pulcro, con la ayuda de indicadores de comando.
+Te ayuda a utilizar la semantica en tus commits para tener un commit mas pulcro, con la ayuda de indicadores de comando..
 
 [MIT](LICENSE)
 

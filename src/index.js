@@ -5,10 +5,11 @@ import {
     select
 } from '@clack/prompts';
 import colors from 'picocolors' 
-import { getChangedFiles, getStagedFiles, getStartCommit } from './services/git.js';
+import { getChangedFiles, getStagedFiles, startAddChange,getStartCommit } from './services/git.js';
 import { CommitsTypes } from './utils/commitsType.js';
 
 try {
+    await startAddChange();
     const  changeFaile = await getChangedFiles()
     const  stagedFiles = await getStagedFiles()
 
