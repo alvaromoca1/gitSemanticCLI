@@ -9,6 +9,7 @@ import { getChangedFiles, getStagedFiles, startAddChange,getStartCommit } from '
 import { CommitsTypes } from './utils/commitsType.js';
 
 try {
+    await startAddChange();
     const  changeFaile = await getChangedFiles()
     const  stagedFiles = await getStagedFiles()
 
@@ -29,7 +30,6 @@ try {
         message: 'Introduce tu nuevo commit:',
         placeholder: 'tu commit ...'
     })
-    await startAddChange();
     await getStartCommit(commitOption,commitTag);
     outro('gran commit, sigue codenando...');
 } catch (error) {
