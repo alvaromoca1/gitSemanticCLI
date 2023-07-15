@@ -26,7 +26,16 @@ $ npm uninstall -g semantic-commit-moca
 ```sh
 $ amcGit
 ```
-
+ lo que realizar la aparicion de opciones dentro de tu consola a tomar
+ ```sh
+ ✨ feat -> Introduce una nueva característica en el código base
+│  ○ ⚡️ fix -> Corrige un error en su base de código.
+│  ○ 📈 perf -> Un cambio de código que mejora el rendimiento
+│  ○ 🔨 refactor -> Un cambio de código que no corrige un error ni agrega una característica
+│  ○ 📝 docs -> Documentación solo cambios.
+│  ○ 🧪 test -> Adición de pruebas faltantes o corrección de pruebas existentes.
+│  ○ 📦️ build -> Cambios que afectan el sistema de compilación
+```
 ## Descripcion
 
 Te ayuda a utilizar la semantica en tus commits para tener un commit mas pulcro, con la ayuda de indicadores de comando..
