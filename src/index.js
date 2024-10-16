@@ -14,7 +14,7 @@ try {
 
     intro(colors.inverse(`Te ayudare con la semantica en tu commit`));
     
-    if(stagedFiles.length ==0){
+    if(stagedFiles.length == 0 && changeFaile.length == 0){
         outro(colors.red(`ERROR: no hay archivos para commitear`));
         process.exit(1)
     }
@@ -27,7 +27,11 @@ try {
     })
     const commitTag = await text({
         message: 'Introduce tu nuevo commit:',
-        placeholder: 'tu commit ...'
+        placeholder: 'tu commit ...',
+        initialValue: `${commitOption}:`,
+        validate(value) {
+            if (value.length === 0) return `Value is required!`;
+        },
     })
     await getStartCommit(commitOption,commitTag);
     outro('gran commit, sigue codenando...');
