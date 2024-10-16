@@ -5,7 +5,7 @@ import {
     select
 } from '@clack/prompts';
 import colors from 'picocolors' 
-import { getChangedFiles, getStagedFiles, startAddChange,getStartCommit } from './services/git.js';
+import { getChangedFiles, getStagedFiles, startAddChange,getStartCommit, getBranch } from './services/git.js';
 import { CommitsTypes } from './utils/commitsType.js';
 
 try {
@@ -22,20 +22,27 @@ try {
     const commitOption = await select({
         message: 'Selecciona el Tipo de Commit:',
         options: Object.entries(CommitsTypes).map(([key,value])=>({
-            value: `${value.icon} ${key}`,
+            value: `${key}`,
             label: `${value.emoji} ${key} -> ${value.description}`
         }))
     })
+    const branch = await getBranch();
+    let ticket = ""
+    if (branch[0].startsWith("feature/")){
+        ticket = `[${branch[0].split("/")[1]}] `;
+    }
+    
     const commitTag = await text({
         message: 'Introduce tu nuevo commit:',
         placeholder: 'tu commit ...',
-        initialValue: `${commitOption}:`,
+        initialValue: `${ticket}${commitOption}:`,
         validate(value) {
             if (value.length === 0) return `Value is required!`;
         },
     })
     await getStartCommit(commitOption,commitTag);
     outro('gran commit, sigue codenando...');
+
 } catch (error) {
     outro(colors.red('Error: Comprueba que este es un repositorio con git o rrealiza el <<git init>>'));
     console.log(error)

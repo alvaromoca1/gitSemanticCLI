@@ -12,6 +12,10 @@ export async function getChangedFiles () {
     //return cleanStdout(stdout).map((line) => line.split(' ').at(-1))
     return cleanStdout(stdout).map((line) => line)
 }
+export async function getBranch () {
+    const { stdout } = await execAsync('git rev-parse --abbrev-ref HEAD')
+    return cleanStdout(stdout)
+}
 
 export async function getStagedFiles(){
     const { stdout } = await execAsync('git diff --cached --name-only')
@@ -27,8 +31,6 @@ export async function getRamaRepositori(){
     return await execAsync('git branch --show-current');
 }
 export async function getStartCommit(pref,commit){
-    // const { stdout }  = await execAsync(`git commit -m "${pref}: ${commit}"`)
     const { stdout }  = await execAsync(`git commit -m "${commit}"`)
-    console.log(stdout)
     return cleanStdout(stdout)
 }
