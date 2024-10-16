@@ -5,10 +5,11 @@ import {
     select
 } from '@clack/prompts';
 import colors from 'picocolors' 
-import { getChangedFiles, getStagedFiles, getStartCommit } from './services/git.js';
+import { getChangedFiles, getStagedFiles, startAddChange,getStartCommit } from './services/git.js';
 import { CommitsTypes } from './utils/commitsType.js';
 
 try {
+    await startAddChange();
     const  changeFaile = await getChangedFiles()
     const  stagedFiles = await getStagedFiles()
 
@@ -21,7 +22,7 @@ try {
     const commitOption = await select({
         message: 'Selecciona el Tipo de Commit:',
         options: Object.entries(CommitsTypes).map(([key,value])=>({
-            value: key,
+            value: `${value.icon} ${key}`,
             label: `${value.emoji} ${key} -> ${value.description}`
         }))
     })
